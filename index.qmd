@@ -11,16 +11,22 @@ author:
     orcid: 0000-0002-0688-6389
     email: liza.bolton@auckland.ac.nz
     role: Presenting
-    affiliation: 
-        url: www.lizabolton.com
-footer: "NZSA 2024"
+  - name: Lars Thomsen
+    id: lt
+    email: lars.thomsen@auckland.ac.nz
+  - name: Charlotte Jones-Todd
+    id: cjt
+    orcid: 0000-0003-1201-2781
+    email: c.jonestodd@auckland.ac.nz
+
+    
+footer: "NZSA Conference 2024, Te Herenga Waka—Victoria University of Wellington"
 date: 2024-12-02
-#title-slide-attributes:
-  #data-background-image: "chongqing.gif"
-  #data-background-opacity: "0.4"
+title-slide-attributes:
+  background-color: "aquamarine"
 format:
   revealjs:
-    #theme: theme.scss
+    theme: theme.scss
     transition: fade
     width: 1600
     height: 900
@@ -48,11 +54,17 @@ library(tidyverse)
 
 ```{r, eval = F, echo=F}
 # Need to rerun if change URL
-code <- qrcode::qr_code("")
+code <- qrcode::qr_code("https://lizabolton.github.io/2024-12-02_NZSA-Wellington/#/title-slide")
 png("img/slide-qr.png")
 plot(code)
 dev.off()
 ```
+
+# To do 
+
+- Set up the theme colours better
+- Spacing
+
 
 #
 :::: {.columns}
@@ -104,10 +116,85 @@ a stage three data science practice course.
 
 # Motivation
 
-# Demo
+::: notes
+I have an idea for a bit of a person reflection intro on what we were trying and failing to do in Toronto with version and the experience shifting to methods that felt likely they were punishing good students more than they were preventing cheating, workload was high but also felt a bit pointless
 
-# Design principles
+This then ties in to coming back to Auckland and seeing the work Anna was doing on 10x
+:::
 
-# 
+# Context
+
+## Introduction to Statistics
+
+- *describe the STATS 101/108 context*
+- *breifly mention Anna's work in STATS 220, and future development for BIOSCI (Charlotte)*
+
+# Demonstration
+
+## To do?
+
+- Create a little toy demo in free Canvas 
+- Synthetic data based on the actual data we have about how students use the quiz would be a fun meta here
+- Give the link to iNZight also
+- This wouldn't have versions
+
+This part will meet the aim of iNZight considerations and opportunities and has the benefit of introducing some of ideas for aim 3. 
+
+# Design principles & pedagogy
+
+## Question types
+
+Automarked questions tend to come in the following types:
+
+- Identify if a statement is TRUE or FALSE, or complete a statement with the right drop down to make it correct.
+  - Recall
+  - 
+- Write a **number**
+  - Recall (a year, a rule of thumb)
+  - Identify the number from text
+  - Perform a calculation
+  - Interact with data
+- Write a word
+  - Recall
+
+
+:::notes
+T or F might come with a bunch of distractors
+
+:::
+
+## Question generating models
+
+
+
+:::notes
+Ideas about getting students to
+
+:::
+
+# So...how does it work in practice?
+
+## To do 
+
+- Do some analyses on the attempt data (check if profiles team has anything fun to add and credit)
+- Call back to some of this built out into the quiz
+
+# Reflections
+
+Student use these quizzes for revision quite effectively.
+
+Some student will brute force it to try to get their 10/10 without understanding fully what they're supposed to be doing.
+
+Makes it easier on us when writing portions of the tests and exams as we can draw on styles of question they're very familiar with but put them in the new data context.
 
 # Conclusions
+
+## FAQ
+
+Does this ruin your class average? Nope.
+
+# Next steps
+
+- 📦 Working towards a package that would make it easier to write these question generating models in R and then set up the components appropriately for Canvas, Inspera, HTML, etc.
+
+- 👥 Understanding student interaction profiles
