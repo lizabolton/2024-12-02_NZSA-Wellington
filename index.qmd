@@ -1,0 +1,113 @@
+---
+title: "🤔 That's questionable"
+subtitle: "Designing and deploying effective models for generating multiple versions of auto-marked questions"
+author:
+  - name: Anna Fergusson
+    id: af
+    orcid: 0000-0002-1987-8150
+    email: a.fergusson@auckland.ac.nz
+  - name: Liza Bolton
+    id: lb
+    orcid: 0000-0002-0688-6389
+    email: liza.bolton@auckland.ac.nz
+    role: Presenting
+    affiliation: 
+        url: www.lizabolton.com
+footer: "NZSA 2024"
+date: 2024-12-02
+#title-slide-attributes:
+  #data-background-image: "chongqing.gif"
+  #data-background-opacity: "0.4"
+format:
+  revealjs:
+    #theme: theme.scss
+    transition: fade
+    width: 1600
+    height: 900
+    background-transition: fade
+    highlight-style: ayu-mirage
+    slide-number: c/t
+    auto-stretch: false
+    code-fold: true
+    code-summary: "Show the code"
+    embed-resources: true
+code-link: true
+execute:
+  echo: true
+  freeze: auto
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+```{r, echo=F, message=F, warning=F}
+library(tidyverse)
+```
+
+
+
+```{r, eval = F, echo=F}
+# Need to rerun if change URL
+code <- qrcode::qr_code("")
+png("img/slide-qr.png")
+plot(code)
+dev.off()
+```
+
+#
+:::: {.columns}
+
+::: {.column width="50%"}
+## Scan for slides
+
+![](img/slide-qr.png){fig-align="center" width="650"}
+
+or go to [link.lizabolton.com](link.lizabolton.com)
+
+:::
+
+
+::: {.column width="50%"}
+
+### Funding
+This project has received funding from the Faculty of Science Scholarship of Teaching and Learning Fund.
+<br>
+<br>
+
+### Ethics
+This study was approved by the University of Auckland Human Participants Ethics Committee (ref: UAHPEC27494).
+:::
+
+::::
+
+# Aims
+
+This talk has three aims:
+
+1)  to explore design principles that support pedagogy-first
+        approaches to creating question-generating models,
+2)  to share considerations and opportunities with respect to having
+        students analyse data (with iNZight Lite) to answer quiz
+        questions, and
+3)  to report on how students are actually using quizzes with
+        multiple versions in a large introductory statistics course,
+        including findings based on data about quiz attempts, as well as
+        reflections from the teaching team.
+
+::: notes
+Kia ora koutou ko Liza taku ingoa
+
+I am a professional teaching fellow in the Department of Statistics and
+in May this year I was at Southwest University for three weeks teaching
+a stage three data science practice course.
+:::
+
+# Motivation
+
+# Demo
+
+# Design principles
+
+# 
+
+# Conclusions
