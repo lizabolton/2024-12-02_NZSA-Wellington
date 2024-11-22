@@ -22,8 +22,6 @@ author:
     
 footer: "NZSA Conference 2024, Te Herenga Waka—Victoria University of Wellington"
 date: 2024-12-02
-title-slide-attributes:
-  background-color: "aquamarine"
 format:
   revealjs:
     theme: theme.scss
@@ -63,7 +61,8 @@ dev.off()
 # To do 
 
 - Set up the theme colours better
-- Spacing
+- Spacing of date
+- Add WTR UoA affiliation to cover
 
 
 #
@@ -119,7 +118,9 @@ a stage three data science practice course.
 ::: notes
 I have an idea for a bit of a person reflection intro on what we were trying and failing to do in Toronto with version and the experience shifting to methods that felt likely they were punishing good students more than they were preventing cheating, workload was high but also felt a bit pointless
 
-This then ties in to coming back to Auckland and seeing the work Anna was doing on 10x
+This then ties in to coming back to Auckland and seeing the work Anna was doing on 10x.
+
+When I first taught in this course, tests and exams were focussed on writing multi-choice questions. Part of this was the tech of scantrons, etc. Now, as we've moved to online tests and exam, the tech has influences our question writing style again, but this time freed us up to have low-stakes questions that 
 :::
 
 # Context
@@ -146,20 +147,19 @@ This part will meet the aim of iNZight considerations and opportunities and has 
 
 Automarked questions tend to come in the following types:
 
-- Identify if a statement is TRUE or FALSE, or complete a statement with the right drop down to make it correct.
-  - Recall
-  - 
+- Identify if a statement is TRUE or FALSE
+- Complete a statement with the right drop down
 - Write a **number**
-  - Recall (a year, a rule of thumb)
-  - Identify the number from text
-  - Perform a calculation
-  - Interact with data
-- Write a word
-  - Recall
+- Write a **word**
 
 
+How a student might get that answer:
+- Recall (a year, a rule of thumb)
+- Identify the number from text
+- Perform a calculation
+- Interact with data
 :::notes
-T or F might come with a bunch of distractors
+T or F might come with a bunch of distractors, and that is where historically a lot of question writing work has gone
 
 :::
 
@@ -191,7 +191,14 @@ Makes it easier on us when writing portions of the tests and exams as we can dra
 
 ## FAQ
 
-Does this ruin your class average? Nope.
+*Does this ruin your class average becasue thet all get 10s?* Nope.
+
+*Do you do this for the test and exam?* Nope. The current tech support drama of one testing platform is more than enough for high-stakes assessments, so we don't have students use iNZight in the test and exam
+
+:::notes
+Low-stakes assessments are a great way to put your marks where your mouth is for how you want students to study and enagage in the course.
+
+:::
 
 # Next steps
 

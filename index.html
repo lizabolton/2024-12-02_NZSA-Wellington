@@ -1146,7 +1146,7 @@ margin-right: 0; }
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" background-color="aquamarine" class="quarto-title-block center"><h1 class="title">🤔 That’s questionable</h1>
+<section id="title-slide" class="quarto-title-block center"><h1 class="title">🤔 That’s questionable</h1>
   <p class="subtitle">Designing and deploying effective models for generating multiple versions of auto-marked questions</p>
 
 <div class="quarto-title-authors">
@@ -1188,7 +1188,8 @@ Charlotte Jones-Todd <a href="https://orcid.org/0000-0003-1201-2781" class="quar
 </section><section id="to-do" class="title-slide slide level1 center"><h1>To do</h1>
 <ul>
 <li>Set up the theme colours better</li>
-<li>Spacing</li>
+<li>Spacing of date</li>
+<li>Add WTR UoA affiliation to cover</li>
 </ul></section><section><section id="section" class="title-slide slide level1 center"><h1></h1>
 
 </section><div class="columns">
@@ -1227,7 +1228,8 @@ overflow: hidden!important;
 display:block!important;
 }</style></aside></section><section id="motivation" class="title-slide slide level1 center"><h1>Motivation</h1>
 <aside class="notes"><p>I have an idea for a bit of a person reflection intro on what we were trying and failing to do in Toronto with version and the experience shifting to methods that felt likely they were punishing good students more than they were preventing cheating, workload was high but also felt a bit pointless</p>
-<p>This then ties in to coming back to Auckland and seeing the work Anna was doing on 10x</p>
+<p>This then ties in to coming back to Auckland and seeing the work Anna was doing on 10x.</p>
+<p>When I first taught in this course, tests and exams were focussed on writing multi-choice questions. Part of this was the tech of scantrons, etc. Now, as we’ve moved to online tests and exam, the tech has influences our question writing style again, but this time freed us up to have low-stakes questions that</p>
 <style type="text/css">
 span.MJX_Assistive_MathML {
 position:absolute!important;
@@ -1259,38 +1261,16 @@ display:block!important;
 </section><section id="question-types" class="slide level2"><h2>Question types</h2>
 <p>Automarked questions tend to come in the following types:</p>
 <ul>
-<li>Identify if a statement is TRUE or FALSE, or complete a statement with the right drop down to make it correct.
-<ul>
-<li>Recall</li>
-<li>
-</li></ul>
-</li>
+<li>Identify if a statement is TRUE or FALSE</li>
+<li>Complete a statement with the right drop down</li>
 <li>Write a <strong>number</strong>
-<ul>
-<li>Recall (a year, a rule of thumb)</li>
-<li>Identify the number from text</li>
-<li>Perform a calculation</li>
-<li>Interact with data</li>
-</ul>
 </li>
-<li>Write a word
-<ul>
-<li>Recall</li>
-</ul>
+<li>Write a <strong>word</strong>
 </li>
 </ul>
-<aside class="notes"><p>T or F might come with a bunch of distractors</p>
-<style type="text/css">
-span.MJX_Assistive_MathML {
-position:absolute!important;
-clip: rect(1px, 1px, 1px, 1px);
-padding: 1px 0 0 0!important;
-border: 0!important;
-height: 1px!important;
-width: 1px!important;
-overflow: hidden!important;
-display:block!important;
-}</style></aside></section><section id="question-generating-models" class="slide level2"><h2>Question generating models</h2>
+<p>How a student might get that answer: - Recall (a year, a rule of thumb) - Identify the number from text - Perform a calculation - Interact with data :::notes T or F might come with a bunch of distractors, and that is where historically a lot of question writing work has gone</p>
+<p>:::</p>
+</section><section id="question-generating-models" class="slide level2"><h2>Question generating models</h2>
 <aside class="notes"><p>Ideas about getting students to</p>
 <style type="text/css">
 span.MJX_Assistive_MathML {
@@ -1315,8 +1295,20 @@ display:block!important;
 </section><section><section id="conclusions" class="title-slide slide level1 center"><h1>Conclusions</h1>
 
 </section><section id="faq" class="slide level2"><h2>FAQ</h2>
-<p>Does this ruin your class average? Nope.</p>
-</section></section><section id="next-steps" class="title-slide slide level1 center"><h1>Next steps</h1>
+<p><em>Does this ruin your class average becasue thet all get 10s?</em> Nope.</p>
+<p><em>Do you do this for the test and exam?</em> Nope. The current tech support drama of one testing platform is more than enough for high-stakes assessments, so we don’t have students use iNZight in the test and exam</p>
+<aside class="notes"><p>Low-stakes assessments are a great way to put your marks where your mouth is for how you want students to study and enagage in the course.</p>
+<style type="text/css">
+span.MJX_Assistive_MathML {
+position:absolute!important;
+clip: rect(1px, 1px, 1px, 1px);
+padding: 1px 0 0 0!important;
+border: 0!important;
+height: 1px!important;
+width: 1px!important;
+overflow: hidden!important;
+display:block!important;
+}</style></aside></section></section><section id="next-steps" class="title-slide slide level1 center"><h1>Next steps</h1>
 <ul>
 <li><p>📦 Working towards a package that would make it easier to write these question generating models in R and then set up the components appropriately for Canvas, Inspera, HTML, etc.</p></li>
 <li><p>👥 Understanding student interaction profiles</p></li>
