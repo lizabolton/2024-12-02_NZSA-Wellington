@@ -1,6 +1,10 @@
 ---
 title: "🤔 That's questionable"
 subtitle: "Designing and deploying effective models for generating multiple versions of auto-marked questions"
+title-slide-attributes:
+  data-background-image: img/questionmarks.gif
+  data-background-size: cover
+  data-background-opacity: "0.3"
 author:
   - name: Anna Fergusson
     id: af
@@ -18,9 +22,6 @@ author:
     id: cjt
     orcid: 0000-0003-1201-2781
     email: c.jonestodd@auckland.ac.nz
-
-    
-footer: "NZSA Conference 2024, Te Herenga Waka—Victoria University of Wellington"
 date: 2024-12-02
 format:
   revealjs:
@@ -35,6 +36,10 @@ format:
     code-fold: true
     code-summary: "Show the code"
     embed-resources: true
+    header: "Slides: link.lizabolton.com"
+    header-logo: img/S DS HRC RGB.png
+filters:
+  - reveal-header
 code-link: true
 execute:
   echo: true
@@ -44,10 +49,11 @@ editor:
     wrap: 72
 ---
 
+#
+
 ```{r, echo=F, message=F, warning=F}
 library(tidyverse)
 ```
-
 
 
 ```{r, eval = F, echo=F}
@@ -58,20 +64,16 @@ plot(code)
 dev.off()
 ```
 
-# To do 
+::: notes
+Kia ora koutou, ko Liza taku ingoa. I am a Professional Teaching Fellow in the Department of Statistics at Waipapa Taumata Rau, University of Auckland.
+:::
 
-- Set up the theme colours better
-- Spacing of date
-- Add WTR UoA affiliation to cover
-
-
-#
 :::: {.columns}
 
 ::: {.column width="50%"}
 ## Scan for slides
 
-![](img/slide-qr.png){fig-align="center" width="650"}
+![](img/slide-qr.png){fig-align="center" width="600"}
 
 or go to [link.lizabolton.com](link.lizabolton.com)
 
@@ -79,6 +81,11 @@ or go to [link.lizabolton.com](link.lizabolton.com)
 
 
 ::: {.column width="50%"}
+<br>
+<br>
+*Presented at NZSA 2024 @ Te Herenga Waka Victoria University of Wellington*
+<br>
+<br>
 
 ### Funding
 This project has received funding from the Faculty of Science Scholarship of Teaching and Learning Fund.
@@ -91,6 +98,29 @@ This study was approved by the University of Auckland Human Participants Ethics 
 
 ::::
 
+:::notes
+
+:::
+
+# Course context
+
+::: {.incremental}
+- STATS 101/108 is an introductory statistics course
+  - *an introduction to using data to learn, identify and solve problems, make decisions, and communicate*
+- 1600 to ~2000 students in Semesters 1 and 2 + a summer school offering
+- Required for programmes in business and psychology
+- 👩🏻‍🏫 Teaching teams of 4–6 lecturers, 8–10 help room tutors and 15–20 markers  
+- **Major redesign in 2023**
+:::
+
+## Redesign components {.center}
+
+::: {.r-stack}
+![](img/redesign1.png)
+
+![](img/redesign2.png){.fragment}
+:::
+
 # Aims
 
 This talk has three aims:
@@ -102,16 +132,9 @@ This talk has three aims:
         questions, and
 3)  to report on how students are actually using quizzes with
         multiple versions in a large introductory statistics course,
-        including findings based on data about quiz attempts, as well as
-        reflections from the teaching team.
+        including findings based on data about quiz attempts, as well as reflections from the teaching team.
 
-::: notes
-Kia ora koutou ko Liza taku ingoa
 
-I am a professional teaching fellow in the Department of Statistics and
-in May this year I was at Southwest University for three weeks teaching
-a stage three data science practice course.
-:::
 
 # Motivation
 
@@ -205,3 +228,9 @@ Low-stakes assessments are a great way to put your marks where your mouth is for
 - 📦 Working towards a package that would make it easier to write these question generating models in R and then set up the components appropriately for Canvas, Inspera, HTML, etc.
 
 - 👥 Understanding student interaction profiles
+
+## The bigger project
+
+Liza to go look at the ethics
+
+Looking at design and looking at what's coming out of the use of tools, how do we 

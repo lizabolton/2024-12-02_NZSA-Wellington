@@ -5,9 +5,10 @@
 // fonts
 @import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
 @import 'https://fonts.googleapis.com/css2?family=Lato&display=swap';
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300..700&display=swap');
 
-$font-family-sans-serif: "Lato", sans-serif;
-$presentation-heading-color: #2A9D8F;
+$font-family-sans-serif: "Quicksand", sans-serif;
+$presentation-heading-color: #474972;
 $presentation-title-slide-text-align: "left";
 $presentation-subtitle-slide-text-align: "left";
 $code-block-font-size: 0.6em;
@@ -16,30 +17,24 @@ $presentation-h2-font-size: 1.4em;
 
 /*-- scss:rules --*/
 
-.reveal .custom-title {
+.reveal-header .header-logo {
   position: absolute;
-  color: #E20317;
-  font-size: 3em;
-  text-align: right;
-  right: 20px;
-  top: -200px;
+  top: -15px;
 }
 
-.reveal .custom-subtitle {
-  position: absolute;
-  color: #E20317;
+.reveal .title {
+  color: #474972;
   font-size: 3em;
-  text-align: right;
-  right: 20px;
-  top: -200px;
 }
 
-.reveal .custom-author {
-  position: absolute;
+.reveal .subtitle {
+  color: #474972;
+  font-size: 2em;
+  top: -300px;
+}
+
+.reveal .author {
   font-size: 1.4em;
-  text-align: right;
-  right: 20px;
-  top: 300px;
 }
 
 .reveal .custom-twitter a {
@@ -53,7 +48,7 @@ $presentation-h2-font-size: 1.4em;
 
 .reveal .custom-url a {
   position: absolute;
-  color: #2A9D8F;
+  color: #474972;
   font-size: 1.5em;
   text-align: right;
   right: 20px;

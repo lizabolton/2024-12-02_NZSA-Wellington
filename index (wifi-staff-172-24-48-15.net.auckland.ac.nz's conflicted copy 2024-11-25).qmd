@@ -1,0 +1,213 @@
+---
+title: "🤔 That's questionable"
+subtitle: "Designing and deploying effective models for generating multiple versions of auto-marked questions"
+author:
+  - name: Anna Fergusson
+    id: af
+    orcid: 0000-0002-1987-8150
+    email: a.fergusson@auckland.ac.nz
+  - name: Liza Bolton
+    id: lb
+    orcid: 0000-0002-0688-6389
+    email: liza.bolton@auckland.ac.nz
+    role: Presenting
+  - name: Lars Thomsen
+    id: lt
+    email: lars.thomsen@auckland.ac.nz
+  - name: Charlotte Jones-Todd
+    id: cjt
+    orcid: 0000-0003-1201-2781
+    email: c.jonestodd@auckland.ac.nz
+
+    
+footer: "NZSA Conference 2024, Te Herenga Waka—Victoria University of Wellington"
+date: 2024-12-02
+format:
+  revealjs:
+    theme: theme.scss
+    transition: fade
+    width: 1600
+    height: 900
+    background-transition: fade
+    highlight-style: ayu-mirage
+    slide-number: c/t
+    auto-stretch: false
+    code-fold: true
+    code-summary: "Show the code"
+    embed-resources: true
+code-link: true
+execute:
+  echo: true
+  freeze: auto
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+```{r, echo=F, message=F, warning=F}
+library(tidyverse)
+```
+
+
+
+```{r, eval = F, echo=F}
+# Need to rerun if change URL
+code <- qrcode::qr_code("https://lizabolton.github.io/2024-12-02_NZSA-Wellington/#/title-slide")
+png("img/slide-qr.png")
+plot(code)
+dev.off()
+```
+
+# To do 
+
+- Set up the theme colours better
+- Spacing of date
+- Add WTR UoA affiliation to cover
+
+
+#
+:::: {.columns}
+
+::: {.column width="50%"}
+## Scan for slides
+
+![](img/slide-qr.png){fig-align="center" width="650"}
+
+or go to [link.lizabolton.com](link.lizabolton.com)
+
+:::
+
+
+::: {.column width="50%"}
+
+### Funding
+This project has received funding from the Faculty of Science Scholarship of Teaching and Learning Fund.
+<br>
+<br>
+
+### Ethics
+This study was approved by the University of Auckland Human Participants Ethics Committee (ref: UAHPEC27494).
+:::
+
+::::
+
+# Aims
+
+This talk has three aims:
+
+1)  to explore design principles that support pedagogy-first
+        approaches to creating question-generating models,
+2)  to share considerations and opportunities with respect to having
+        students analyse data (with iNZight Lite) to answer quiz
+        questions, and
+3)  to report on how students are actually using quizzes with
+        multiple versions in a large introductory statistics course,
+        including findings based on data about quiz attempts, as well as
+        reflections from the teaching team.
+
+::: notes
+Kia ora koutou ko Liza taku ingoa
+
+I am a professional teaching fellow in the Department of Statistics and
+in May this year I was at Southwest University for three weeks teaching
+a stage three data science practice course.
+:::
+
+# Motivation
+
+::: notes
+I have an idea for a bit of a person reflection intro on what we were trying and failing to do in Toronto with version and the experience shifting to methods that felt likely they were punishing good students more than they were preventing cheating, workload was high but also felt a bit pointless
+
+This then ties in to coming back to Auckland and seeing the work Anna was doing on 10x.
+
+When I first taught in this course, tests and exams were focussed on writing multi-choice questions. Part of this was the tech of scantrons, etc. Now, as we've moved to online tests and exam, the tech has influences our question writing style again, but this time freed us up to have low-stakes questions that 
+:::
+
+# Context
+
+## Introduction to Statistics
+
+- *describe the STATS 101/108 context*
+- *breifly mention Anna's work in STATS 220, and future development for BIOSCI (Charlotte)*
+
+# Demonstration
+
+## To do?
+
+- Create a little toy demo in free Canvas 
+- Synthetic data based on the actual data we have about how students use the quiz would be a fun meta here
+- Give the link to iNZight also
+- This wouldn't have versions
+
+This part will meet the aim of iNZight considerations and opportunities and has the benefit of introducing some of ideas for aim 3. 
+
+# Design principles & pedagogy
+
+## Question types
+
+Automarked questions tend to come in the following types:
+
+- Identify if a statement is TRUE or FALSE
+- Complete a statement with the right drop down
+- Write a **number**
+- Write a **word**
+
+
+How a student might get that answer:
+- Recall (a year, a rule of thumb)
+- Identify the number from text
+- Perform a calculation
+- Interact with data
+:::notes
+T or F might come with a bunch of distractors, and that is where historically a lot of question writing work has gone
+
+:::
+
+## Question generating models
+
+
+
+:::notes
+Ideas about getting students to
+
+:::
+
+# So...how does it work in practice?
+
+## To do 
+
+- Do some analyses on the attempt data (check if profiles team has anything fun to add and credit)
+- Call back to some of this built out into the quiz
+
+# Reflections
+
+Student use these quizzes for revision quite effectively.
+
+Some student will brute force it to try to get their 10/10 without understanding fully what they're supposed to be doing.
+
+Makes it easier on us when writing portions of the tests and exams as we can draw on styles of question they're very familiar with but put them in the new data context.
+
+# Conclusions
+
+## FAQ
+
+*Does this ruin your class average becasue thet all get 10s?* Nope.
+
+*Do you do this for the test and exam?* Nope. The current tech support drama of one testing platform is more than enough for high-stakes assessments, so we don't have students use iNZight in the test and exam
+
+:::notes
+Low-stakes assessments are a great way to put your marks where your mouth is for how you want students to study and enagage in the course.
+
+:::
+
+# Next steps
+
+- 📦 Working towards a package that would make it easier to write these question generating models in R and then set up the components appropriately for Canvas, Inspera, HTML, etc.
+
+- 👥 Understanding student interaction profiles
+
+## The bigger project
+
+Liza to go look at the ethics
+
+Looking at design and looking at what's coming out of the use of tools, how do we 
