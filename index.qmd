@@ -6,15 +6,15 @@ title-slide-attributes:
   data-background-size: cover
   data-background-opacity: "0.3"
 author:
-  - name: Anna Fergusson
-    id: af
-    orcid: 0000-0002-1987-8150
-    email: a.fergusson@auckland.ac.nz
   - name: Liza Bolton
     id: lb
     orcid: 0000-0002-0688-6389
     email: liza.bolton@auckland.ac.nz
     role: Presenting
+  - name: Anna Fergusson
+    id: af
+    orcid: 0000-0002-1987-8150
+    email: a.fergusson@auckland.ac.nz    
   - name: Lars Thomsen
     id: lt
     email: lars.thomsen@auckland.ac.nz
