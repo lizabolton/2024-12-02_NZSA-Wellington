@@ -160,6 +160,7 @@ knitr::include_graphics("img/10_3_A_real_29.gif")
 ::: notes
 Here is an example of a question addressing a learning outcome about interpretting compatability with a null hypothesis. The student compares the observed data to simulated nulls, as well as considering the tail proportion associated with the test statistic and are asked to make some calls about this. 
 
+Model distributional variation under the null (Chapter 10)
 :::
 
 
@@ -171,6 +172,7 @@ Here is an example of a question addressing a learning outcome about interpretti
 - As with any model, we need to consider our inputs, outputs and *assumptions*.
   - Quite different vs similar?
   - Visual skew vs calculated kurtosis?
+  - The right answer shouldn't always be in the middle 🤦‍♀️
 :::
 
 ::: small
@@ -188,6 +190,17 @@ Zeileis A, Umlauf N, Leisch F (2014). “Flexible Generation of E-Learning Exams
 knitr::include_graphics("img/Chapter1example.png")
 ```
 
+
+
+::: notes
+Use simple visualisations to explore categorical data (Chapter 1: Datafication)
+:::
+
+## Words can be hard
+
+```{r, out.height="95%", fig.align = "center", echo = F, caption = "Example Chapter 9 question in which students need to identify features fo a study."}
+knitr::include_graphics("img/Chapter9example.png")
+```
 
 # Results
 ---
@@ -268,7 +281,7 @@ knitr::include_graphics("img/final_overall.png")
 - Automation is not really lessening workload here, but it is enabling us to create useful learning tasks with some future proofing.
   - Someone posts answers to all 40 versions online? Rerun the question generating model and get 40 new questions. 
 - Almost certainly want to iterate and have some human checking during development.
-- 🤑 Putting your "marks where your mouth is" in this way does result in student engagement and practice.
+- 🤑 Putting your "marks where your mouth is" in this way results in student engagement and practice.
 :::
 
 # Next steps
@@ -299,6 +312,8 @@ This talk had three aims:
 ## FAQ {visibility="uncounted"}
 
 *Does this ruin your class average becasue thet all get 10s?* Nope.
+<br>
+<br>
 
 *Do you do this for the test and exam?* Nope. The current tech support drama of one testing platform is more than enough for high-stakes assessments, so we don't have students use iNZight in the test and exam
 
