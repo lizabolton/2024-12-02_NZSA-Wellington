@@ -121,9 +121,171 @@ This study was approved by the University of Auckland Human Participants Ethics 
 ![](img/redesign2.png){.fragment}
 :::
 
-# Aims
+::: small
+Adapted from Fergusson, A. (2024, November 19). *Getting the best of both worlds: Integrating human and automated assistance to support student learning via an online question-answering platform*. University of Auckland STELA group meeting.
+:::
 
-This talk has three aims:
+:::notes
+This redesign has lots of components, and many aspects of this are part of a wider research project Anna is leading, exploring the impact of technological innovations on assessment practices within large-scale introductory statistics courses. 
+
+It's been awesome to be invited to take part in this research, and in this talk I'm focusing specifically on some details about the new quizzes.
+:::
+
+## Quizzes
+
+:::incremental
+- 11 total chapter quizzes, for the first 11 (of 12) chapters in the coursebook
+- Unlimited attempts
+- No time limit
+- Low stakes assessment: each worth 1% of the final grade
+- Students are encouraged to ask questions and get help with the quizzes in the drop-in help sessions with tutors and peers
+:::
+
+::: notes
+There are 11 chapter-based quizzes in the course. In a 12 week semester this is a quiz per week and covers the first 11 chapters of the coursebook. Each quiz is designed to cover some aspect of each learning outcome for the the given chapter.
+
+Each quiz opens after the previous one closes and students have unlimited, untimed attempts.
+
+These quizzes are low stakes assessments, worth 1% each.
+
+Because they are heavily versioned, student are not only allowed, but encouraged to come to the drop-in sessions and talk the quizzes over with tutors and their peers.
+:::
+
+## An example
+
+```{r, out.height="95%", fig.align = "center", echo = F, caption = "Example Chapter 10 quiz question comparing observed data to simulated null distributions"}
+knitr::include_graphics("img/10_3_A_real_29.gif")
+```
+
+::: notes
+Here is an example of a question addressing a learning outcome about interpretting compatability with a null hypothesis. The student compares the observed data to simulated nulls, as well as considering the tail proportion associated with the test statistic and are asked to make some calls about this. 
+
+:::
+
+
+# Question generating models
+
+::: incremental
+- There are existing tools like the 📦 `exams` (e.g., Zeileis et al., 2014) package in R to generate versioned assessments.
+- HOW to generate these questions from models is not yet as developed an area.
+- As with any model, we need to consider our inputs, outputs and *assumptions*.
+  - Quite different vs similar?
+  - Visual skew vs calculated kurtosis?
+:::
+
+::: small
+Zeileis A, Umlauf N, Leisch F (2014). “Flexible Generation of E-Learning Exams in R: Moodle Quizzes, OLAT Assessments, and Beyond.” *Journal of Statistical Software*, 58(1), 1–36. [doi:10.18637/jss.v058.i01](https://doi.org/10.18637/jss.v058.i01).
+
+:::
+
+
+## More examples
+
+[Link to iNZight](https://lite.docker.stat.auckland.ac.nz/?url=https://csv.monster/temp/drtn6540513dd8192.csv&land=visualize)
+
+
+```{r, out.height="95%", fig.align = "center", echo = F, caption = "Example Chapter 1 question for which students need to interact with the data in iNZIght to get answers."}
+knitr::include_graphics("img/Chapter1example.png")
+```
+
+
+# Results
+---
+
+:::: {.columns}
+
+::: {.column width="40%"}
+From Semester 1, 2024
+
+1,984 enrolled students
+
+Data shown is for submissions by the due date
+
+:::
+
+::: {.column width="60%"}
+
+::: smaller
+
+```{r, echo = F}
+read_csv("attempts_table.csv", show_col_types = F) |> 
+  mutate(mean = round(mean,1)) |> 
+  rename(Quiz = assessment_number, Mean = mean, Median = median, `Upper 90%` = q90) |> 
+  kableExtra::kable()
+```
+
+:::
+
+:::
+::::
+
+::: notes
+Median of 3 to 5 attempts per quiz.
+Right skew.
+For all quizzes 90% of students made under 12.
+:::
+
+## Attempts
+
+```{r, out.height="95%", fig.align = "center", echo = F, caption = "Distribution of max grade for the first 9 attempts of each quiz"}
+knitr::include_graphics("img/quiz_attempts.gif")
+```
+
+## Grades
+
+
+:::: {.columns}
+::: {.column width="50%"}
+
+- You still have a small number of students who don't do *any* quizzes. 👻
+- Lower quartile: 76\%
+- Median: 90.5\%
+- Mean: 82.5\%
+:::
+
+::: {.column width="50%"}
+```{r, out.height="95%", fig.align = "center", echo = F, caption = "Final overal score on quizzes"}
+knitr::include_graphics("img/final_overall.png")
+```
+
+:::
+::::
+
+# Reflections
+
+::: incremental
+- Student use these quizzes for revision quite effectively.
+
+- Some student will brute force it to try to get their 10/10 without understanding fully what they're supposed to be doing.
+  - BUT some students would later use these questions to guide the help they ask for in revision. Helps them be keenly aware of what they are still stumped on.
+
+- Writing portions of the tests and exams are easier (for the teaching team) as we can draw on familiar question styles with new data context.
+:::
+
+# Conclusions
+
+:::incremental
+- Automation is not really lessening workload here, but it is enabling us to create useful learning tasks with some future proofing.
+  - Someone posts answers to all 40 versions online? Rerun the question generating model and get 40 new questions. 
+- Almost certainly want to iterate and have some human checking during development.
+- 🤑 Putting your "marks where your mouth is" in this way does result in student engagement and practice.
+:::
+
+# Next steps
+
+- 📦 Working towards a package that would make it easier to write these question generating models in R and then set up the components appropriately for Canvas, Inspera, HTML, etc.
+
+- 👥 Understanding student interaction profiles.
+
+- ❓✅❌  Developing tools for assessing the difficulty of  these types of questions and quizzes.
+
+# [Thank you!]{style="color:white;"} {background-image="img/questionmarks.gif"}
+
+[+ Thank you and credit to our summer research assistants who are working on the profile and difficulty work, as we speak: Jingdi Sun, Brittany Alexander, Cris Escandor & Fergus Lee.]{style="color:white;"}
+
+# Aims summary {visibility="uncounted"}
+
+This talk had three aims:
 
 1)  to explore design principles that support pedagogy-first
         approaches to creating question-generating models,
@@ -133,104 +295,14 @@ This talk has three aims:
 3)  to report on how students are actually using quizzes with
         multiple versions in a large introductory statistics course,
         including findings based on data about quiz attempts, as well as reflections from the teaching team.
-
-
-
-# Motivation
-
-::: notes
-I have an idea for a bit of a person reflection intro on what we were trying and failing to do in Toronto with version and the experience shifting to methods that felt likely they were punishing good students more than they were preventing cheating, workload was high but also felt a bit pointless
-
-This then ties in to coming back to Auckland and seeing the work Anna was doing on 10x.
-
-When I first taught in this course, tests and exams were focussed on writing multi-choice questions. Part of this was the tech of scantrons, etc. Now, as we've moved to online tests and exam, the tech has influences our question writing style again, but this time freed us up to have low-stakes questions that 
-:::
-
-# Context
-
-## Introduction to Statistics
-
-- *describe the STATS 101/108 context*
-- *breifly mention Anna's work in STATS 220, and future development for BIOSCI (Charlotte)*
-
-# Demonstration
-
-## To do?
-
-- Create a little toy demo in free Canvas 
-- Synthetic data based on the actual data we have about how students use the quiz would be a fun meta here
-- Give the link to iNZight also
-- This wouldn't have versions
-
-This part will meet the aim of iNZight considerations and opportunities and has the benefit of introducing some of ideas for aim 3. 
-
-# Design principles & pedagogy
-
-## Question types
-
-Automarked questions tend to come in the following types:
-
-- Identify if a statement is TRUE or FALSE
-- Complete a statement with the right drop down
-- Write a **number**
-- Write a **word**
-
-
-How a student might get that answer:
-- Recall (a year, a rule of thumb)
-- Identify the number from text
-- Perform a calculation
-- Interact with data
-:::notes
-T or F might come with a bunch of distractors, and that is where historically a lot of question writing work has gone
-
-:::
-
-## Question generating models
-
-
-
-:::notes
-Ideas about getting students to
-
-:::
-
-# So...how does it work in practice?
-
-## To do 
-
-- Do some analyses on the attempt data (check if profiles team has anything fun to add and credit)
-- Call back to some of this built out into the quiz
-
-# Reflections
-
-Student use these quizzes for revision quite effectively.
-
-Some student will brute force it to try to get their 10/10 without understanding fully what they're supposed to be doing.
-
-Makes it easier on us when writing portions of the tests and exams as we can draw on styles of question they're very familiar with but put them in the new data context.
-
-# Conclusions
-
-## FAQ
+        
+## FAQ {visibility="uncounted"}
 
 *Does this ruin your class average becasue thet all get 10s?* Nope.
 
 *Do you do this for the test and exam?* Nope. The current tech support drama of one testing platform is more than enough for high-stakes assessments, so we don't have students use iNZight in the test and exam
 
 :::notes
-Low-stakes assessments are a great way to put your marks where your mouth is for how you want students to study and enagage in the course.
+Low-stakes assessments are a great way to put your marks where your is for how you want students to study and enagage in the course.
 
-:::
-
-# Next steps
-
-- 📦 Working towards a package that would make it easier to write these question generating models in R and then set up the components appropriately for Canvas, Inspera, HTML, etc.
-
-- 👥 Understanding student interaction profiles
-
-## The bigger project
-
-Liza to go look at the ethics
-
-Looking at design and looking at what's coming out of the use of tools, how do we 
+:::        
