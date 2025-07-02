@@ -158,7 +158,7 @@ knitr::include_graphics("img/10_3_A_real_29.gif")
 ```
 
 ::: notes
-Here is an example of a question addressing a learning outcome about interpretting compatability with a null hypothesis. The student compares the observed data to simulated nulls, as well as considering the tail proportion associated with the test statistic and are asked to make some calls about this. 
+Here is an example of a question addressing a learning outcome about interpreting compatability with a null hypothesis. The student compares the observed data to simulated nulls, as well as considering the tail proportion associated with the test statistic and are asked to make some calls about this. 
 
 Model distributional variation under the null (Chapter 10)
 :::
@@ -269,7 +269,7 @@ knitr::include_graphics("img/final_overall.png")
 ::: incremental
 - Student use these quizzes for revision quite effectively.
 
-- Some student will brute force it to try to get their 10/10 without understanding fully what they're supposed to be doing.
+- Some students will brute force it to try to get their 10/10 without understanding fully what they're supposed to be doing.
   - BUT some students would later use these questions to guide the help they ask for in revision. Helps them be keenly aware of what they are still stumped on.
 
 - Writing portions of the tests and exams are easier (for the teaching team) as we can draw on familiar question styles with new data context.
@@ -311,7 +311,7 @@ This talk had three aims:
         
 ## FAQ {visibility="uncounted"}
 
-*Does this ruin your class average becasue thet all get 10s?* Nope.
+*Does this ruin your class average because they all get 10s?* Nope.
 <br>
 <br>
 
