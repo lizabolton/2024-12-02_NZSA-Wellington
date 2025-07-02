@@ -267,7 +267,7 @@ knitr::include_graphics("img/final_overall.png")
 # Reflections
 
 ::: incremental
-- Student use these quizzes for revision quite effectively.
+- Students use these quizzes for revision quite effectively.
 
 - Some students will brute force it to try to get their 10/10 without understanding fully what they're supposed to be doing.
   - BUT some students would later use these questions to guide the help they ask for in revision. Helps them be keenly aware of what they are still stumped on.
